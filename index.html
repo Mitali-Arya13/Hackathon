@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        background: #0b0b21;
+        padding: 1rem;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        margin-top: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">Fineweet</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-primary" href="#">Subscribe</a></li>
+      </ul>
+    </div>
+    <div class="hero container">
+      <h2>Step-by-step guide to choosing great font pairs</h2>
+      <p>By John Doe | Jan 1, 2025</p>
+      <button class="btn btn-primary">Read More</button>
+    </div>
+  </header>
+
+  <section class="posts-section">
+  <div class="container">
+    <div class="posts-header">
+      <h2>Featured Post</h2>
+      <h2>All Posts</h2>
+    </div>
+
+    <div class="posts-content">
+      <!-- Featured Post -->
+      <div class="featured-post">
+        <img src="https://media.istockphoto.com/id/1130687040/photo/late-nights-and-dedicated-staff.webp?a=1&b=1&s=612x612&w=0&k=20&c=s_a_WcOgJeEjbNFP3BmN6wqBoNnAOM_kamUiS3_S8Z4=" alt="Featured Image" />
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Et, iure doloribus. Earum iure consequatur quas.</p>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+
+      <!-- All Posts -->
+      <div class="all-posts">
+        <ul>
+          <li>
+            <span class="date">August 24, 2025</span>
+            <a href="#">5 Figma design systems that you can download for free today<br>
+              Figma design systems that you can download for free today.</a>
+          </li>
+          <li class="highlighted">
+            <span class="date">August 24, 2025</span>
+            <a href="#">Another free Figma resource worth checking out.
+              Figma design systems that you can download for free today
+            </a>
+          </li>
+          <li>
+            <span class="date">August 24, 2025</span>
+            <a href="#">How to design effective UI kits in Figma
+              Figma design systems that you can download for free today.</a>
+          </li>
+          <li>
+            <span class="date">August 24, 2025</span>
+            <a href="#">Creating scalable components with ease
+              Figma design systems that you can download for free today.</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+        <div class="section-header">
+            <div class="yellow-bar"></div>
+            <div class="blue-bar"></div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h4>ABOUT US</h4>
+                <h2>We are a community of content writers who share their learnings</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <a href="#">Read More ></a>
+            </div>
+
+            <div class="card">
+                <h4>OUR MISSION</h4>
+                <h2>Creating valuable content for creatives all around the world</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </section>
+
+  <section class="category-section">
+  <div class="container">
+    <h2 class="section-title">Choose A Category</h2>
+    <div class="category-list">
+      <div class="category-card">
+        <!-- <img src="images/icon-business.png" alt="Business Icon"> -->
+        <h3>Business</h3>
+        <p>Get the latest business updates & tips</p>
+      </div>
+      <div class="category-card active">
+        <!-- <img src="images/icon-startup.png" alt="Startup Icon"> -->
+        <h3>Startup</h3>
+        <p>Explore new startups & ideas</p>
+      </div>
+      <div class="category-card">
+        <!-- <img src="images/icon-economy.png" alt="Economy Icon"> -->
+        <h3>Economy</h3>
+        <p>Understand trends & forecasts</p>
+      </div>
+      <div class="category-card">
+        <!-- <img src="images/icon-technology.png" alt="Technology Icon"> -->
+        <h3>Technology</h3>
+        <p>Stay updated with tech news</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="story-section">
+  <div class="story-container">
+    <div class="story-image">
+      <img src="images/download.jpg" alt="Our Story Image">
+    </div>
+    <div class="story-content">
+      <span class="story-label">We are startup</span>
+      <h2 class="story-heading">
+        It started out as a simple idea and evolved into our passion
+      </h2>
+      <p class="story-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+      </p>
+      <a href="#" class="story-button">Discover our story →</a>
+    </div>
+  </div>
+</section>
+
+  <section class="authors">
+    <h2>List of Authors</h2>
+    <div class="author-list">
+       <!-- Team Member Card -->
+      <div class="team-card">
+        <img src="images/1.jpg" alt="Floyd Miles">
+        <h3>Floyd Miles</h3>
+        <p>Founder & CEO</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+       <div class="team-card">
+        <img src="images/1.jpg" alt="Dianne Russell">
+        <h3>Dianne Russell</h3>
+        <p>Founder & CEO</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/1.jpg" alt="Dianne Russell">
+        <h3>Dianne Russell</h3>
+        <p>Founder & CEO</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+      <!-- Repeat for other members -->
+      <div class="team-card">
+        <img src="images/1.jpg" alt="Dianne Russell">
+        <h3>Dianne Russell</h3>
+        <p>Founder & CEO</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+        <div class="testimonial-left">
+            <h5>TESTIMONIALS</h5>
+            <h2>What people say about our blog</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+
+        <div class="testimonial-right">
+            <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="testimonial-footer">
+                <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <div>
+                        <strong>Jonathan Vallem</strong>
+                        <small>New York, USA</small>
+                    </div>
+                </div>
+
+                <button class="next-btn">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+  <section class="cta">
+    <p>Join our team to be a part of our story</p>
+    <button class="btn btn-primary">Join Now</button>
+  </section>
+
+    <footer>
+
+        <div class="newsletter">
+            <div class="logoo">Finsweet</div>
+            <div class="footer-nav">
+                <a href="#">Home</a>
+                <a href="index.html">Blog</a>
+                <a href="about.html">About us</a>
+                <a href="contact.html">Contact us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p>Subscribe to our newsletter to get latest updates and news</p>
+            <input type="email" placeholder="Your Email">
+            <button>Subscribe</button>
+        </div>
+
+        <p class="copyright">Finsweet © 2024 | 020 7992 2905</p>
+    </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+});
+
+  </script>
+</body>
+</html>
